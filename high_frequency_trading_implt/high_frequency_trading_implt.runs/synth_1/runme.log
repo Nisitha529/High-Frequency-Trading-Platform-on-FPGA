@@ -1,0 +1,896 @@
+
+*** Running vivado
+    with args -log top_hft.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_hft.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_hft.tcl -notrace
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:33 . Memory (MB): peak = 1341.211 ; gain = 104.836 ; free physical = 349 ; free virtual = 7646
+Command: synth_design -top top_hft -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 279662
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2153.715 ; gain = 404.715 ; free physical = 206 ; free virtual = 6782
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_hft' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/top_hft.v:3]
+INFO: [Synth 8-6157] synthesizing module 'eth_layer' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'eth_layer' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ip_layer' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_layer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ip_layer' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_layer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tcp_layer' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tcp_ip_stack' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:3]
+WARNING: [Synth 8-11581] system function call 'random' not supported [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:68]
+WARNING: [Synth 8-11581] system function call 'random' not supported [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'tcp_ip_stack' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'tcp_layer' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ip_core' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'ip_core' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'axi_stream_if' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/axi_stream_if.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DEST_WIDTH bound to: 4 - type: integer 
+	Parameter USER_WIDTH bound to: 4 - type: integer 
+	Parameter ID_WIDTH bound to: 4 - type: integer 
+	Parameter HAS_STRB bound to: 0 - type: integer 
+	Parameter HAS_KEEP bound to: 0 - type: integer 
+	Parameter HAS_LAST bound to: 1 - type: integer 
+	Parameter HAS_DEST bound to: 0 - type: integer 
+	Parameter HAS_USER bound to: 0 - type: integer 
+	Parameter HAS_ID bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_stream_if' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/axi_stream_if.v:1]
+INFO: [Synth 8-6157] synthesizing module 'order_matcher' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/order_matcher.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/order_matcher.v:187]
+INFO: [Synth 8-6155] done synthesizing module 'order_matcher' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/order_matcher.v:1]
+INFO: [Synth 8-6157] synthesizing module 'risk_manager' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/risk_manager.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'risk_manager' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/risk_manager.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_hft' (0#1) [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/top_hft.v:3]
+WARNING: [Synth 8-7137] Register tx_buffer_reg in module eth_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v:50]
+WARNING: [Synth 8-7137] Register mac_tx_data_reg in module eth_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v:56]
+WARNING: [Synth 8-7137] Register rx_buffer_reg in module eth_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v:66]
+WARNING: [Synth 8-7137] Register tcp_ip_rx_data_reg in module eth_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v:73]
+WARNING: [Synth 8-6014] Unused sequential element tcp_ack_num_reg was removed.  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:52]
+WARNING: [Synth 8-7137] Register tx_buffer_reg in module tcp_ip_stack has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register eth_tx_data_reg in module tcp_ip_stack has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:128]
+WARNING: [Synth 8-7137] Register app_rx_data_reg in module tcp_ip_stack has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:137]
+WARNING: [Synth 8-4767] Trying to implement RAM 'tx_buffer_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "tx_buffer_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+WARNING: [Synth 8-3848] Net rx_buffer in module/entity tcp_ip_stack does not have driver. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_ip_stack.v:43]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element tcp_seq_num_reg was removed.  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:72]
+WARNING: [Synth 8-6014] Unused sequential element tcp_ack_num_reg was removed.  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:73]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[0] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[1] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[2] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[3] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[4] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[5] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[6] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[7] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[8] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[9] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[10] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[11] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[12] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[13] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[14] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[15] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[16] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[17] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[18] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[19] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[20] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[21] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[22] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[23] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[24] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[25] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[26] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[27] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[28] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[29] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[30] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[31] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[32] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[33] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[34] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[35] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[36] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[37] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[38] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[39] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[40] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[41] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[42] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[43] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[44] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[45] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[46] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[47] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[48] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[49] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[50] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[51] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[52] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[53] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[54] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[55] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[56] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[57] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[58] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[59] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[60] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[61] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[62] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[63] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[64] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[65] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[66] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[67] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[68] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[69] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[70] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[71] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[72] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[73] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[74] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[75] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[76] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[77] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[78] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[79] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[80] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[81] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[82] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[83] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[84] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[85] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[86] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[87] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[88] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[89] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[90] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[91] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+WARNING: [Synth 8-7137] Register packet_buffer_reg[92] in module ip_core has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:51]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element bid_order_type_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element bid_execution_strategy_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element bid_stop_price_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element bid_iceberg_quantity_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element ask_stop_price_reg was removed. 
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: Unable to determine number of words or word size in RAM. 
+	2: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-7129] Port max_exposure_limit[31] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[30] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[29] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[28] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[27] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[26] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[25] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[24] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[23] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[22] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[21] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[20] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[19] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[18] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[17] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[16] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[15] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[14] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[13] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[12] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[11] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[10] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[9] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[8] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[7] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[6] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[5] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[4] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[3] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[2] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[1] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port max_exposure_limit[0] in module risk_manager is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[31] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[30] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[29] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[28] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[27] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[26] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[25] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[24] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[23] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[22] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[21] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[20] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[19] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[18] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[17] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[16] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[15] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[14] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[13] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[12] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[11] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[10] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[9] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[8] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[7] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[6] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[5] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[4] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[3] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tcp_rx_data[2] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[31] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[30] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[29] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[28] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[27] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[26] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[25] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[24] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[23] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[22] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[21] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[20] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[19] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[18] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[17] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[16] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[15] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[14] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[13] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[12] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[11] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[10] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[9] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[8] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[7] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[6] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[5] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[4] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[3] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[2] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[1] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_data[0] in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_valid in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_ready in module order_matcher is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk in module axi_stream_if is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module axi_stream_if is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[31] in module axi_stream_if is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[30] in module axi_stream_if is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2304.652 ; gain = 555.652 ; free physical = 191 ; free virtual = 6557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2316.527 ; gain = 567.527 ; free physical = 187 ; free virtual = 6554
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2316.527 ; gain = 567.527 ; free physical = 187 ; free virtual = 6554
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2316.527 ; gain = 0.000 ; free physical = 178 ; free virtual = 6501
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:25]
+WARNING: [Vivado 12-3521] Clock specified in more than one group: clk_100MHz [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:28]
+WARNING: [Vivado 12-507] No nets matched '*cdc_sync_fifo_din_reg*'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:31]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-through [get_nets -hierarchical *cdc_sync_fifo_din_reg*]'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:31]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-507] No nets matched '*cdc_sync_fifo_dout_reg*'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:32]
+CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-through [get_nets -hierarchical *cdc_sync_fifo_dout_reg*]'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:32]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-508] No pins matched '*cdc_sync_fifo_wr_en_reg/C'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:35]
+WARNING: [Vivado 12-508] No pins matched '*cdc_sync_fifo_rd_en_reg/C'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:36]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {NAME =~ *top_level*}'. [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:44]
+CRITICAL WARNING: [Vivado 12-4433] Constraint ranges extend outside the device: SLICE_X0Y0:SLICE_X150Y150 [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc:45]
+Finished Parsing XDC File [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_hft_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_hft_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.277 ; gain = 0.000 ; free physical = 174 ; free virtual = 6343
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2458.312 ; gain = 0.000 ; free physical = 176 ; free virtual = 6345
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 170 ; free virtual = 6355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 170 ; free virtual = 6355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 170 ; free virtual = 6356
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'tcp_state_reg' in module 'tcp_ip_stack'
+INFO: [Synth 8-802] inferred FSM for state register 'tcp_state_reg' in module 'tcp_layer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  CLOSED |                                0 |                               00
+                SYN_SENT |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tcp_state_reg' using encoding 'sequential' in module 'tcp_ip_stack'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+        TCP_STATE_CLOSED |                                0 |                               00
+      TCP_STATE_SYN_SENT |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tcp_state_reg' using encoding 'sequential' in module 'tcp_layer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 195 ; free virtual = 6352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 8     
+	   2 Input    6 Bit       Adders := 1     
++---Registers : 
+	             1024 Bit    Registers := 2     
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 524   
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input 1024 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 9     
+	   6 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 3     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 17    
+	   4 Input    8 Bit        Muxes := 6     
+	   3 Input    8 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 554   
+	   4 Input    1 Bit        Muxes := 267   
+	   6 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP internal_reg20, operation Mode is: A*B.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: Generating DSP internal_reg20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: Generating DSP internal_reg20, operation Mode is: A*B.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: Generating DSP internal_reg20, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+DSP Report: operator internal_reg20 is absorbed into DSP internal_reg20.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_tcp_state_reg) is unused and will be removed from module tcp_ip_stack.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/tcp_layer_inst/rx_buffer_valid_reg/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:74]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:74]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:74]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/tcp_layer_inst/tx_buffer_valid_reg/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:75]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:75]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:75]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/s_axis_tready_reg__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/m_axis_tvalid_reg__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:43]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:43]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:43]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[31]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[30]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[29]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[28]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[27]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[26]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[25]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[24]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[23]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[22]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[21]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[20]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[19]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[18]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[17]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[16]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[15]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[14]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[13]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[12]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[11]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[10]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[9]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[8]/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:100]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[7]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[6]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[5]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[4]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[3]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[2]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[1]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_2/ip_core_inst/status_reg_reg[0]__0/Q' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v:44]
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[47]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[46]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[45]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[44]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[43]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[42]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[41]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[40]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[39]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[38]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[37]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[36]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[35]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[34]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[33]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[32]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[31]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[30]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[29]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[28]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[27]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[26]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[25]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[24]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[23]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[22]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[21]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[20]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[19]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[18]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[17]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[16]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[15]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[14]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[13]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[12]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[11]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[10]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[9]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[8]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[7]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[6]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[5]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[4]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[3]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[2]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[1]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[0]) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[47]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[46]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[45]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[44]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[43]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[42]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[41]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[40]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[39]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[38]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[37]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[36]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[35]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[34]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[33]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[32]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[31]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[30]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[29]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[28]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[27]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[26]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[25]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[24]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[23]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[22]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[21]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[20]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[19]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[18]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[17]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[16]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[15]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[14]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[13]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[12]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[11]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[10]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[9]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[8]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[7]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[6]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[5]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[4]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[3]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[2]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[1]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[0]__0) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[47]__1) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[46]__1) is unused and will be removed from module ip_core.
+WARNING: [Synth 8-3332] Sequential element (internal_reg2_reg[45]__1) is unused and will be removed from module ip_core.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 223 ; free virtual = 6346
+---------------------------------------------------------------------------------
+ Sort Area is top_hft__GB2 internal_reg20_0 : 0 0 : 3101 5879 : Used 1 time 0
+ Sort Area is top_hft__GB2 internal_reg20_0 : 0 1 : 2778 5879 : Used 1 time 0
+ Sort Area is top_hft__GB2 internal_reg20_3 : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is top_hft__GB2 internal_reg20_3 : 0 1 : 2659 5418 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ip_core     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ip_core     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ip_core     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ip_core     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+clk_100MHz in more then one group at line 28 of file /media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/constrs_1/new/timing_constraints.xdc
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6334
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 191 ; free virtual = 6302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:01:16 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 191 ; free virtual = 6302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 213 ; free virtual = 6326
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 212 ; free virtual = 6325
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top_hft     | eth_layer_inst/tx_buffer_reg[1006] | 16     | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|top_hft     | eth_layer_inst/mac_tx_data_reg[32] | 20     | 1     | NO           | NO                 | YES               | 0      | 1       | 
+|top_hft     | eth_layer_inst/mac_tx_data_reg[12] | 19     | 1     | NO           | NO                 | YES               | 0      | 1       | 
++------------+------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |LUT1    |     4|
+|3     |LUT2    |     6|
+|4     |LUT3    |     5|
+|5     |LUT4    |     5|
+|6     |LUT5    |     5|
+|7     |LUT6    |    10|
+|8     |SRL16E  |     2|
+|9     |SRLC32E |     2|
+|10    |FDCE    |    20|
+|11    |FDPE    |     1|
+|12    |FDRE    |    19|
+|13    |IBUF    |     4|
+|14    |OBUF    |    82|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6329
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 108 critical warnings and 194 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 2458.312 ; gain = 567.527 ; free physical = 217 ; free virtual = 6329
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.312 ; gain = 709.312 ; free physical = 217 ; free virtual = 6329
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.312 ; gain = 0.000 ; free physical = 217 ; free virtual = 6329
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.312 ; gain = 0.000 ; free physical = 475 ; free virtual = 6590
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: dfc34c14
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 422 Warnings, 112 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:33 ; elapsed = 00:02:17 . Memory (MB): peak = 2458.312 ; gain = 1078.102 ; free physical = 475 ; free virtual = 6590
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2006.360; main = 1701.528; forked = 353.812
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3405.121; main = 2458.281; forked = 978.855
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.289 ; gain = 0.000 ; free physical = 475 ; free virtual = 6590
+INFO: [Common 17-1381] The checkpoint '/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.runs/synth_1/top_hft.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_hft_utilization_synth.rpt -pb top_hft_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 16 09:24:50 2025...

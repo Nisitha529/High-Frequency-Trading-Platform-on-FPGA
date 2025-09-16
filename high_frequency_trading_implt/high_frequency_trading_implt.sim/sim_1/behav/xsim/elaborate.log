@@ -1,0 +1,32 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_level_behav xil_defaultlib.tb_top_level xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 47 into 'ip_rx_data' is out of bounds [/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/tcp_layer.v:90]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v" Line 1. Module ethernet_layer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v" Line 1. Module custom_ip_core doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/axi_stream_if.v" Line 1. Module axi_stream_if doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/order_matcher.v" Line 1. Module order_matching_engine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/eth_layer.v" Line 1. Module ethernet_layer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/ip_core.v" Line 1. Module custom_ip_core doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/axi_stream_if.v" Line 1. Module axi_stream_if doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sources_1/new/order_matcher.v" Line 1. Module order_matching_engine doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ethernet_layer
+Compiling module xil_defaultlib.ip_layer
+Compiling module xil_defaultlib.tcp_ip_stack
+Compiling module xil_defaultlib.tcp_layer
+Compiling module xil_defaultlib.custom_ip_core
+Compiling module xil_defaultlib.axi_stream_if
+Compiling module xil_defaultlib.order_matching_engine
+Compiling module xil_defaultlib.risk_management
+Compiling module xil_defaultlib.top_level
+Compiling module xil_defaultlib.tb_top_level
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_level_behav
