@@ -3,7 +3,7 @@ This repository contains a high-frequency trading system implemented on an FPGA,
 
 ## Overview
 The system is structured as a pipeline of processing modules, each responsible for a specific aspect of the trading workflow. The design emphasizes low latency and high throughput, critical for HFT applications. The top-level module integrates Ethernet communication, TCP/IP protocol handling, custom IP core processing, order matching, and risk management.
-<img width="1892" height="541" alt="Schematic Layout of the High Frequency Trading Platform" src="https://github.com/user-attachments/assets/baea5c78-8b5d-4041-97c5-72f18bab413e" />
+<img width="1892" height="541" alt="Schematic Layout of the High Frequency Trading Platform" src="https://github.com/Nisitha529/High-Frequency-Trading-Platform-on-FPGA/blob/main/img_dir/Schematic_Layout.png" />
 
 ## Module Architecture
 ### Top Level module (top_hft.v)
