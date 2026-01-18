@@ -1,31 +1,33 @@
 `timescale 1ns / 1ps
 
-module risk_manager (
-  input  wire        clk,                  // system clock
-  input  wire        rst_n,                // active-low reset
-  input  wire [31:0] trade_data,           // incoming trade size
-  input  wire        trade_valid,          // trade request valid
-  output reg         trade_approved,       // approval result
+module risk_manager #(
+  // Configurable switches for enabling/disabling checks
+  parameter RISK_CHECK_EXPOSURE = 1,
+  parameter RISK_CHECK_POSITION = 1,
+  
+  parameter DATA_WIDTH          = 32
+)(
+  input                          clk,                  // system clock
+  input                          rst_n,                // active-low reset
+  
+  input      [DATA_WIDTH - 1 :0] trade_data,           // incoming trade size
+  input                          trade_valid,          // trade request valid
+  output reg                     trade_approved,       // approval result
 
   // Position tracking
-  input  wire [31:0] position_update,      // delta to apply to position
-  input  wire        position_update_valid,
-  output reg  [31:0] current_position,     // accumulated position
+  input      [DATA_WIDTH - 1 :0] position_update,      // delta to apply to position
+  input                          position_update_valid,
+  output reg [DATA_WIDTH - 1 :0] current_position,     // accumulated position
 
   // Exposure tracking
-  input  wire [31:0] exposure_update,      // delta to apply to exposure
-  input  wire        exposure_update_valid,
-  output reg  [31:0] current_exposure,     // accumulated exposure
+  input      [DATA_WIDTH - 1 :0] exposure_update,      // delta to apply to exposure
+  input                          exposure_update_valid,
+  output reg [DATA_WIDTH - 1 :0] current_exposure,     // accumulated exposure
 
   // External risk limits
-  input  wire [31:0] max_exposure_limit,   // max allowable exposure
-  input  wire [31:0] max_position_limit    // max allowable position
+  input      [DATA_WIDTH - 1 :0] max_exposure_limit,   // max allowable exposure
+  input      [DATA_WIDTH - 1 :0] max_position_limit    // max allowable position
 );
-
-  // Configurable switches for enabling/disabling checks
-  parameter RISK_CHECK_EXPOSURE = 1;
-  parameter RISK_CHECK_POSITION = 1;
-
   // Main risk management process
   always @(posedge clk) begin
     if (!rst_n) begin
