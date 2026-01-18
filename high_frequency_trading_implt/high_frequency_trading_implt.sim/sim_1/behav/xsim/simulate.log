@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+Simulation started...
+Time=0 | rIntRst=0 | rDlyRst=0
+Time=5000 | rIntRst=1 | rDlyRst=1
+Time=35000 | rIntRst=0 | rDlyRst=1
+Time=105000 | rIntRst=0 | rDlyRst=0
+Time=135000 | rIntRst=1 | rDlyRst=1
+Time=155000 | rIntRst=0 | rDlyRst=1
+Time=225000 | rIntRst=0 | rDlyRst=0
+Simulation finished.
+$stop called at time : 255 ns : File "/media/nisitha/My_Passport/MOODLE/Vivado_projects/hft_project/high_frequency_trading_implt/high_frequency_trading_implt.srcs/sim_1/new/tb_rst_mod.v" Line 50

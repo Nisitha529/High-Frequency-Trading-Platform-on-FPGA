@@ -7,44 +7,44 @@ module risk_manager (
   input  wire        trade_valid,          // trade request valid
   output reg         trade_approved,       // approval result
 
-  // position tracking
+  // Position tracking
   input  wire [31:0] position_update,      // delta to apply to position
   input  wire        position_update_valid,
   output reg  [31:0] current_position,     // accumulated position
 
-  // exposure tracking
+  // Exposure tracking
   input  wire [31:0] exposure_update,      // delta to apply to exposure
   input  wire        exposure_update_valid,
   output reg  [31:0] current_exposure,     // accumulated exposure
 
-  // external risk limits
+  // External risk limits
   input  wire [31:0] max_exposure_limit,   // max allowable exposure
   input  wire [31:0] max_position_limit    // max allowable position
 );
 
-  // configurable switches for enabling/disabling checks
+  // Configurable switches for enabling/disabling checks
   parameter RISK_CHECK_EXPOSURE = 1;
   parameter RISK_CHECK_POSITION = 1;
 
-  // main risk management process
+  // Main risk management process
   always @(posedge clk) begin
     if (!rst_n) begin
-      // reset state
-      trade_approved   <= 1;
-      current_position <= 0;
-      current_exposure <= 0;
+      // Reset state
+      trade_approved     <= 1;
+      current_position   <= 0;
+      current_exposure   <= 0;
     end else begin
-      // accumulate position if update arrives
+      // Accumulate position if update arrives
       if (position_update_valid) begin
         current_position <= current_position + position_update;
       end
 
-      // accumulate exposure if update arrives
+      // Accumulate exposure if update arrives
       if (exposure_update_valid) begin
         current_exposure <= current_exposure + exposure_update;
       end
 
-      // validate new trade request
+      // Validate new trade request
       if (trade_valid) begin
         if (RISK_CHECK_EXPOSURE) begin
           if (current_exposure + trade_data > max_exposure_limit) begin
