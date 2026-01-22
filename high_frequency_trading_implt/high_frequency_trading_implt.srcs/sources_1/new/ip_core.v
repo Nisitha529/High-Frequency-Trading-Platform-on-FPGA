@@ -14,7 +14,7 @@ module ip_core (
 
   // Control/status interface
   input  wire [31:0] control_reg,
-  output reg [31:0]  status_reg
+  output reg  [31:0] status_reg
 );
 
   // Storage for incoming packet data
@@ -72,7 +72,8 @@ module ip_core (
               m_axis_tdata  <= packet_buffer[packet_length - 1];
               packet_length <= packet_length - 1;
             end else begin
-              m_axis_tdata <= 32'hFFFFFFFF;  // End-of-packet marker
+              // End-of-packet marker
+              m_axis_tdata <= 32'hFFFFFFFF;  
               next_state   <= STATE_IDLE;
             end
           end

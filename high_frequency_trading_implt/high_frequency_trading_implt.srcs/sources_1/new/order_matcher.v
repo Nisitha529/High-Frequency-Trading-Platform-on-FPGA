@@ -1,23 +1,28 @@
 module order_matcher (
   input  wire        clk,
   input  wire        rst_n,
+  
   input  wire [31:0] order_data,
   input  wire        order_valid,
+  
   output reg  [31:0] trade_data,
   output reg         trade_valid,
 
   // TCP/IP stack interfaces
   input  wire [31:0] tcp_rx_data,
   input  wire        tcp_rx_valid,
+  
   output reg  [31:0] tcp_tx_data,
   output reg         tcp_tx_valid,
 
   // AXI stream interfaces
   input  wire [31:0] s_axis_data,
   input  wire        s_axis_valid,
+  
   output reg         s_axis_ready,
   output reg  [31:0] m_axis_data,
   output reg         m_axis_valid,
+  
   input  wire        m_axis_ready
 );
 
@@ -77,46 +82,58 @@ module order_matcher (
         case (order_data[1:0])
           LIMIT_ORDER: begin
             if (order_data[0])
-              bid_book_size <= bid_book_size + 1;   // New buy limit order
+              // New buy limit order
+              bid_book_size <= bid_book_size + 1;   
             else
-              ask_book_size <= ask_book_size + 1;   // New sell limit order
+            
+              // New sell limit order
+              ask_book_size <= ask_book_size + 1;   
           end
 
           MARKET_ORDER: begin
             if (order_data[0]) begin
+              // Match buy with best sell
               if (ask_book_size > 0) begin
                 trade_data    <= {ask_price[ask_book_size - 1], ask_quantity[ask_book_size - 1]};
                 trade_valid   <= 1;
-                ask_book_size <= ask_book_size - 1; // Match buy with best sell
+                ask_book_size <= ask_book_size - 1; 
               end
             end else begin
+            
+              // Match sell with best buy
               if (bid_book_size > 0) begin
                 trade_data    <= {bid_price[bid_book_size - 1], bid_quantity[bid_book_size - 1]};
                 trade_valid   <= 1;
-                bid_book_size <= bid_book_size - 1; // Match sell with best buy
+                bid_book_size <= bid_book_size - 1; 
               end
             end
           end
 
           STOP_ORDER: begin
             if (order_data[0]) begin
+              // Trigger buy stop
               if (order_data[27:20] <= bid_price[bid_book_size - 1])
-                bid_book_size <= bid_book_size + 1; // Trigger buy stop
+                bid_book_size <= bid_book_size + 1; 
             end else begin
+            
+              // Trigger sell stop
               if (order_data[27:20] >= ask_price[ask_book_size - 1])
-                ask_book_size <= ask_book_size + 1; // Trigger sell stop
+                ask_book_size <= ask_book_size + 1; 
             end
           end
 
           TRAILING_STOP_ORDER: begin
             if (order_data[0]) begin
+              // Activate trailing buy
               if (order_data[27:20] <= bid_price[bid_book_size - 1])
-                bid_book_size <= bid_book_size + 1; // Activate trailing buy
+                bid_book_size <= bid_book_size + 1; 
               else
                 bid_stop_price[bid_book_size] <= bid_price[bid_book_size - 1] - order_data[31:28];
             end else begin
+            
+              // Activate trailing sell
               if (order_data[27:20] >= ask_price[ask_book_size - 1])
-                ask_book_size <= ask_book_size + 1; // Activate trailing sell
+                ask_book_size <= ask_book_size + 1; 
               else
                 ask_stop_price[ask_book_size] <= ask_price[ask_book_size - 1] + order_data[31:28];
             end
@@ -127,26 +144,30 @@ module order_matcher (
         case (order_data[3:2])
           AGGRESSIVE_STRATEGY: begin
             if (order_data[1:0] == LIMIT_ORDER) begin
-              if (order_data[0] && ask_book_size > 0 &&
-                  order_data[11:4] >= ask_price[ask_book_size - 1]) begin
+              // Cross aggressively on buy
+              if (order_data[0] && ask_book_size > 0 && order_data[11:4] >= ask_price[ask_book_size - 1]) begin
                 trade_data    <= {ask_price[ask_book_size - 1], order_data[19:12]};
                 trade_valid   <= 1;
-                ask_book_size <= ask_book_size - 1; // Cross aggressively on buy
-              end else if (!order_data[0] && bid_book_size > 0 &&
-                           order_data[11:4] <= bid_price[bid_book_size - 1]) begin
+                ask_book_size <= ask_book_size - 1; 
+                
+              // Cross aggressively on sell
+              end else if (!order_data[0] && bid_book_size > 0 && order_data[11:4] <= bid_price[bid_book_size - 1]) begin
                 trade_data    <= {bid_price[bid_book_size - 1], order_data[19:12]};
                 trade_valid   <= 1;
-                bid_book_size <= bid_book_size - 1; // Cross aggressively on sell
+                bid_book_size <= bid_book_size - 1; 
               end
             end
           end
 
           PASSIVE_STRATEGY: begin
             if (order_data[1:0] == LIMIT_ORDER) begin
+              // Resting buy
               if (order_data[0])
-                bid_book_size <= bid_book_size + 1; // Resting buy
+                bid_book_size <= bid_book_size + 1; 
+                
+              // Resting sell
               else
-                ask_book_size <= ask_book_size + 1; // Resting sell
+                ask_book_size <= ask_book_size + 1; 
             end
           end
 
@@ -186,10 +207,12 @@ module order_matcher (
       if (tcp_rx_valid) begin
         case (tcp_rx_data[1:0])
           2'b01: begin
+            // New buy via TCP
             if (tcp_rx_data[0])
-              bid_book_size <= bid_book_size + 1; // New buy via TCP
+              bid_book_size <= bid_book_size + 1; 
+            // New sell via TCP
             else
-              ask_book_size <= ask_book_size + 1; // New sell via TCP
+              ask_book_size <= ask_book_size + 1; 
           end
           2'b10: begin
             // Order cancellation not yet implemented
@@ -199,6 +222,7 @@ module order_matcher (
 
       // Send trade reports back over TCP
       tcp_tx_valid <= 0;
+      
       if (trade_valid) begin
         tcp_tx_data  <= {2'b11, trade_data[29:0]};
         tcp_tx_valid <= 1;
