@@ -64,45 +64,39 @@ module tcp_ip_stack (
         CLOSED: begin
           // Initiate connection if application has data
           if (app_tx_valid) begin
-            tcp_state   <= SYN_SENT;
-            tcp_seq_num <= {$random} % 32'hFFFFFFFF;
+            tcp_state          <= SYN_SENT;
+            tcp_seq_num        <= {$random} % 32'hFFFFFFFF;
             tx_buffer[tx_tail] <= {tcp_seq_num, 16'h0002}; // SYN flag
-            tx_tail     <= tx_tail + 1;
+            tx_tail            <= tx_tail + 1;
           end
         end
 
         SYN_SENT: begin
           // Wait for SYN-ACK from remote
-          if (eth_rx_valid &&
-              eth_rx_data[31:16] == {LOCAL_IP, LOCAL_PORT} &&
-              eth_rx_data[15:0]  == {REMOTE_IP, REMOTE_PORT} &&
-              eth_rx_data[15]    == 1'b1) begin
-            tcp_state   <= ESTABLISHED;
-            tcp_ack_num <= eth_rx_data[31:0] + 1;
+          if (eth_rx_valid && eth_rx_data[31:16] == {LOCAL_IP, LOCAL_PORT} && eth_rx_data[15:0]  == {REMOTE_IP, REMOTE_PORT} && eth_rx_data[15]    == 1'b1) begin
+            tcp_state          <= ESTABLISHED;
+            tcp_ack_num        <= eth_rx_data[31:0] + 1;
             tx_buffer[tx_tail] <= {tcp_seq_num, tcp_ack_num, 16'h0010}; // ACK
-            tx_tail     <= tx_tail + 1;
+            tx_tail            <= tx_tail + 1;
           end
         end
 
         ESTABLISHED: begin
           // Send application data if valid
           if (app_tx_valid && app_tx_ready) begin
-            tx_buffer[tx_tail] <= {tcp_seq_num, tcp_ack_num, 16'h0018, app_tx_data}; // PSH-ACK
-            tx_tail            <= tx_tail + 1;
-            tcp_seq_num        <= tcp_seq_num + 1;
+            tx_buffer[tx_tail]   <= {tcp_seq_num, tcp_ack_num, 16'h0018, app_tx_data}; // PSH-ACK
+            tx_tail              <= tx_tail + 1;
+            tcp_seq_num          <= tcp_seq_num + 1;
           end
 
           // Handle received Ethernet packets
-          if (eth_rx_valid &&
-              eth_rx_data[31:16] == {LOCAL_IP, LOCAL_PORT} &&
-              eth_rx_data[15:0]  == {REMOTE_IP, REMOTE_PORT}) begin
-
+          if (eth_rx_valid && eth_rx_data[31:16] == {LOCAL_IP, LOCAL_PORT} && eth_rx_data[15:0]  == {REMOTE_IP, REMOTE_PORT}) begin
             if (eth_rx_data[15] == 1'b1 && eth_rx_data[14] == 1'b1) begin
               // FIN-ACK received, initiate connection teardown
-              tcp_state   <= FIN_WAIT;
-              tcp_ack_num <= eth_rx_data[31:0] + 1;
+              tcp_state          <= FIN_WAIT;
+              tcp_ack_num        <= eth_rx_data[31:0] + 1;
               tx_buffer[tx_tail] <= {tcp_seq_num, tcp_ack_num, 16'h0011}; // FIN-ACK
-              tx_tail     <= tx_tail + 1;
+              tx_tail            <= tx_tail + 1;
 
             end else if (eth_rx_data[13] == 1'b1) begin
               // Data packet received, update buffers
@@ -142,8 +136,8 @@ module tcp_ip_stack (
       end
 
       // Update ready signals for application and Ethernet interfaces
-      app_tx_ready <= (tcp_state == ESTABLISHED) && ((tx_tail - tx_head) < 256);
-      eth_rx_ready <= (tcp_state == ESTABLISHED) && ((rx_tail - rx_head) < 256);
+      app_tx_ready   <= (tcp_state == ESTABLISHED) && ((tx_tail - tx_head) < 256);
+      eth_rx_ready   <= (tcp_state == ESTABLISHED) && ((rx_tail - rx_head) < 256);
     end
   end
 

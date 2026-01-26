@@ -23,6 +23,7 @@ module axi_stream_if #(
   input  wire [(DATA_WIDTH/8)-1:0]   tkeep,
   input  wire                        tlast,
   input  wire                        tvalid,
+  
   output wire                        tready
 );
 
@@ -30,8 +31,7 @@ module axi_stream_if #(
 
   always @(posedge aclk) begin
     if (tvalid && tready) begin
-      $display("AXIS transfer: data=%h, dest=%h, user=%h, id=%h, strb=%h, keep=%h, last=%b",
-                tdata, tdest, tuser, tid, tstrb, tkeep, tlast);
+      $display("AXIS transfer: data=%h, dest=%h, user=%h, id=%h, strb=%h, keep=%h, last=%b", tdata, tdest, tuser, tid, tstrb, tkeep, tlast);
     end
   end
 

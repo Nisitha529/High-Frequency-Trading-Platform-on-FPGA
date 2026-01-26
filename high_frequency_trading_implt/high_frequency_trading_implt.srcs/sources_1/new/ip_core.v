@@ -51,18 +51,18 @@ module ip_core (
             packet_buffer[packet_length] <= s_axis_tdata;
             packet_length                <= packet_length + 1;
             if (s_axis_tdata[31:24] == 8'hFF) begin
-              next_state <= STATE_PROCESS;
+              next_state   <= STATE_PROCESS;
             end
           end
         end
 
         // Apply transformation logic using control register
         STATE_PROCESS: begin
-          internal_reg1   <= packet_buffer[0] + control_reg;
-          internal_reg2   <= packet_buffer[1] * control_reg;
+          internal_reg1    <= packet_buffer[0] + control_reg;
+          internal_reg2    <= packet_buffer[1] * control_reg;
           packet_buffer[0] <= internal_reg1;
           packet_buffer[1] <= internal_reg2;
-          next_state      <= STATE_TRANSMIT;
+          next_state       <= STATE_TRANSMIT;
         end
 
         // Send buffered data to the output stream
@@ -73,8 +73,8 @@ module ip_core (
               packet_length <= packet_length - 1;
             end else begin
               // End-of-packet marker
-              m_axis_tdata <= 32'hFFFFFFFF;  
-              next_state   <= STATE_IDLE;
+              m_axis_tdata  <= 32'hFFFFFFFF;  
+              next_state    <= STATE_IDLE;
             end
           end
         end
@@ -98,9 +98,9 @@ module ip_core (
   // Track current buffer usage in the status register
   always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-      status_reg <= 0;
+      status_reg    <= 0;
     end else begin
-      status_reg <= {24'b0, packet_length};
+      status_reg    <= {24'b0, packet_length};
     end
   end
 
