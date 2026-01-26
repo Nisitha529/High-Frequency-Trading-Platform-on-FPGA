@@ -51,18 +51,18 @@ module ip_core (
             packet_buffer[packet_length] <= s_axis_tdata;
             packet_length                <= packet_length + 1;
             if (s_axis_tdata[31:24] == 8'hFF) begin
-              next_state   <= STATE_PROCESS;
+              next_state                 <= STATE_PROCESS;
             end
           end
         end
 
         // Apply transformation logic using control register
         STATE_PROCESS: begin
-          internal_reg1    <= packet_buffer[0] + control_reg;
-          internal_reg2    <= packet_buffer[1] * control_reg;
-          packet_buffer[0] <= internal_reg1;
-          packet_buffer[1] <= internal_reg2;
-          next_state       <= STATE_TRANSMIT;
+          internal_reg1     <= packet_buffer[0] + control_reg;
+          internal_reg2     <= packet_buffer[1] * control_reg;
+          packet_buffer[0]  <= internal_reg1;
+          packet_buffer[1]  <= internal_reg2;
+          next_state        <= STATE_TRANSMIT;
         end
 
         // Send buffered data to the output stream
@@ -79,7 +79,6 @@ module ip_core (
           end
         end
       endcase
-
       current_state <= next_state;
     end
   end
